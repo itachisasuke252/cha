@@ -1,0 +1,123 @@
+* {
+  margin: 0%;
+  padding: 0%;
+  box-sizing: border-box;
+}
+
+body {
+  width: 100vw;
+  height: 100vh;
+  background-color: hsl(30, 38%, 92%);
+  display: flex;
+}
+
+.container {
+  /* max-height: 600px; */
+  /* height: 600px; */
+  width: 660px;
+  margin: auto;
+  /* background-color: blue; */
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  border-radius: 9px;
+  overflow: hidden;
+}
+img {
+  width: 100%;
+}
+
+.button {
+  background-color: hsl(158, 36%, 37%);
+  height: 40px;
+  border-radius: 9px;
+  border: none;
+  font-size: 16px;
+  color: white;
+}
+.inner-right {
+  padding: 30px;
+  display: flex;
+  height: 100%;
+  background-color: hsl(0, 0%, 100%);
+  flex-direction: column;
+  gap: 0;
+  /* align-items: center; */
+  justify-content: space-between;
+}
+
+.inner-right p {
+  font-size: 16px;
+}
+
+.inner-right h1 {
+  font-family: "Fraunces", serif;
+  /* font-size: 14px; */
+}
+.product {
+  font-family: "Montserrat", sans-serif;
+}
+
+.paragraph {
+  font-family: "Montserrat", sans-serif;
+  line-height: 150%;
+}
+.heading {
+  font-weight: 700;
+}
+.price {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-right: 40px;
+}
+.inner-right h2 {
+  padding: 30px 0;
+  background-color: aqua;
+}
+.price h1 {
+  color: hsl(158, 36%, 37%);
+  font-weight: 700;
+}
+.price p {
+  text-decoration: line-through;
+  font-size: 20px;
+}
+
+@media (min-width: 671px) {
+  .container-left {
+    line-height: 0;
+  }
+}
+@media (max-width: 671px) {
+img{
+  object-fit: cover;
+}
+  .container{
+    max-height: 95%;
+    width: 400px;
+    grid-template-columns: 1fr;
+    grid-template-rows: 45fr 55fr;
+  }
+  .container-left {
+    overflow: hidden;
+  }
+  
+  .price {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-right: 40px;
+  }
+  .inner-right h2 {
+    padding: 30px 0;
+    background-color: aqua;
+  }
+  .price h1 {
+    color: hsl(158, 36%, 37%);
+    font-weight: 700;
+  }
+  .price p {
+    text-decoration: line-through;
+    font-size: 20px;
+  }
+}
